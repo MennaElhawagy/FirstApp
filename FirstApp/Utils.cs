@@ -10,7 +10,7 @@ namespace FirstApp
         {
             using SHA256 sha256 = SHA256.Create();
             byte[] data = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-
+            ///
             StringBuilder sb = new StringBuilder();
 
             for (int i = 0; i < data.Length; i++)
@@ -20,6 +20,7 @@ namespace FirstApp
 
             return sb.ToString();
         }
+
 
         public static string DefaultHashPassword()
         {
